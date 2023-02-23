@@ -3,6 +3,7 @@ services:
     image: amazon/aws-stepfunctions-local
     ports:
       - 8083:8083
+      # - ${HOST_PORT}:${INTERNAL_PORT}
     volumes:
       - ${TEST_CONFIGURATION_FILE_PATH}:/home/stepfunctionslocal/MockConfigFile.json:ro
 

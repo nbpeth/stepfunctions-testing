@@ -4,7 +4,7 @@ const { StepFunctionsClient } = require("./client/stepFunctionsClient");
 
 const _defaultHost = "localhost";
 const _defaultHostPort = "8083";
-const _stepFunctionsLocalPort = "8083";
+// const _stepFunctionsLocalPort = "8083";
 const _defaultRegion = "us-west-2";
 
 class TestEnvironment {
@@ -38,6 +38,8 @@ class TestEnvironment {
     )
       .withEnvironment(
         { TEST_CONFIGURATION_FILE_PATH: this._testConfigFilePath },
+        // { HOST_PORT: "8083" },
+        // { INTERNAL_PORT: "8083" },
         { AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID },
         { AWS_SECRET_ACCESS_KEY: process.env.AWS_SECRET_ACCESS_KEY }, // dummy values maybe
         { AWS_SESSION_TOKEN: process.env.AWS_SESSION_TOKEN },

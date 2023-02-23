@@ -17,7 +17,6 @@ class StepFunctionsClient {
   _internalClient;
 
   constructor({ host, region }) {
-    // timeout config, too
     this._internalClient = new SFNClient({
       endpoint: host,
       region: region,
